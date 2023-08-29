@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURO</title>
+    <link rel=stylesheet href="reset.css">
+    <link rel=stylesheet href="style.css">
+    <link href="https://fonts.google.com/specimen/Montserrat?query=montserrat" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        function updateClock() {
+          const now = new Date();
+          const hours = now.getHours();
+          const minutes = now.getMinutes();
+          const seconds = now.getSeconds();
+        
+          const timeString = `${hours}:${minutes}:${seconds}`;
+          document.getElementById("time").innerHTML = timeString;
+        }
+         
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        </script>
+    <header>
+        <div class="box">
+            <h1><img src="logo-border.png"></h1>
+            <h1 class="stime">Server Time:</h1>
+            <p id="time" class="time"></p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Info.html">Jobs</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" class="default-input" required>
+
+            <label for="psw">Password</label>
+            <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                title="Must contain at least one number and one uppercase and lowercase letter, and at 
+                least 8 or more characters" class="default-input" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="Email" class="default-input" required placeholder="youremail@domain.com">
+
+            <label for="messagegm">Message</label>
+            <textarea cols="70" rows="10" id="messagegm" class="default-input" required></textarea>
+
+            <!--contact type-->
+            <fieldset class="typecontact">
+                <legend>Gender</legend>
+                <label for="radio-email">
+                    <input type="radio" id="radio-email" value="Email" name="typecontact">Male
+                </label>
+                <label for="radio-phone">
+                    <input type="radio" id="radio-phone" value="Phone" name="typecontact">Female
+                </label>
+            </fieldset>
+            
+
+            <!--contact time-->
+            <fieldset class="contact-time">
+                <legend>How did you find us?</legend>
+                    <select>
+                        <option>ROTop 100</option>
+                        <option>Facebook</option>
+                        <option>RateMyServer</option>
+                        <option>AURO Website</option>
+                    </select>
+            </fieldset> 
+            <!--newsletter checkbox-->
+            <label class="checkbox"><input type="checkbox" unchecked>Would you like to receive email update about the game?</label>
+            <!--SEND-->
+            <input type="submit" value="Send Form" class="send">
+        </form>
+    </main>
+
+    <footer>
+        <img src="footer.jpg">
+        <p class="copyright">&copy; Pirate King's Barbershop</p>
+    </footer>
+    
+</body>
+</html>

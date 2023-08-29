@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURO</title>
+    <link rel=stylesheet href="reset.css">
+    <link rel=stylesheet href="style.css">
+    <link href="https://fonts.google.com/specimen/Montserrat?query=montserrat" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        function updateClock() {
+          const now = new Date();
+          const hours = now.getHours();
+          const minutes = now.getMinutes();
+          const seconds = now.getSeconds();
+        
+          const timeString = `${hours}:${minutes}:${seconds}`;
+          document.getElementById("time").innerHTML = timeString;
+        }
+        
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        </script>
+    <header>
+        <div class="box">
+            <h1><img src="logo-border.png"></h1>
+            <h1 class="stime">Server Time:</h1>
+            <p id="time" class="time"></p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Info.html">Jobs</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <ul class="services">
+            <li class="knight">
+                <h2 class="service-title">Knight</h2>
+                <img src="jobknight.gif" height="250">
+                <p class="service-desc">Tank/DPS</p>
+                <p class="service-price">Main Skill: Bash</p>
+            </li>
+            <li class="hunter">
+                <h2 class="service-title">Hunter</h2>
+                <img src="jobhunter.gif" height="250">
+                <p class="service-desc">DPS</p>
+                <p class="service-price">Main Skill: Double Strafe</p>
+            </li>
+            <li class="priest">
+                <h2 class="service-title">Priest</h2>
+                <img src="priestjob.gif" height="250">
+                <p class="service-desc">Support</p>
+                <p class="service-price">Main Skill: Heal</p>
+            </li>
+            <li class="assassin">
+                <h2 class="service-title">Assassin</h2>
+                <img src="assassinjob.gif" height="250">
+                <p class="service-desc">DPS</p>
+                <p class="service-price">Main Skill: Sonic Blow</p>
+            </li>
+            <li class="bs">
+                <h2 class="service-title">Blacksmith</h2>
+                <img src="bsjob.gif" height="250">
+                <p class="service-desc">DPS/Support</p>
+                <p class="service-price">Main Skill: Mamonite</p>
+            </li>
+            <li class="wiz">
+                <h2 class="service-title">Wizard</h2>
+                <img src="wizjob.gif" height="250">
+                <p class="service-desc">DPS</p>
+                <p class="service-price">Main Skill: Fire Bolt</p>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <img src="footer.jpg">
+        <p class="copyright">&copy; Pirate King's Barbershop</p>
+    </footer>
+    
+</body>
+</html>
